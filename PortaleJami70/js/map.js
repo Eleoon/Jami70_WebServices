@@ -238,6 +238,7 @@ else {
 }
 });
 
+/*-----------------------------------------------------------------------*/
 // Crea un oggetto di ricerca per le attrazioni turistiche
 var request = {
   location: milano,
@@ -247,7 +248,7 @@ var request = {
 
 // Crea un oggetto di servizio di ricerca di Google Places
 var service = new google.maps.places.PlacesService(map);
-
+var attractions=[]  ;
 // Esegui la ricerca di Google Places
 service.nearbySearch(request, function(results, status) {
   if (status == google.maps.places.PlacesServiceStatus.OK) {
@@ -261,9 +262,33 @@ service.nearbySearch(request, function(results, status) {
         icon: {url:'../img/attrazione2.png', scaledSize: new google.maps.Size(60, 60)},
 
       });
+      console.log(marker);
+      attractions.push(marker);
     }
+ 
+console.log(attractions);
+/* filtro attrazioni*/
+document.getElementById('flexCheckInterestPoints').addEventListener('change',function(){
+  if (this.checked){
+    attractions.forEach(function(element) {
+      element.setMap(map)
+      console.log("siamo in checked")
+     });
+  }
+  else {
+    attractions.forEach(function(element) {
+    element.setMap(null);
+    console.log("siamo in else")
+    });
+  }
+  
+  }); //filtro
+
+
   }
 });
+
+
 
 
 }/*function init map*/
