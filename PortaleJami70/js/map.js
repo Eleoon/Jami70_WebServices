@@ -242,6 +242,45 @@ else {
 
 }/*function init map*/
 
+// FUNZIONE PER RICERCARE NEI DINTORNI DI RAGGIO "radius" GLI PLACES DI TIPO "type"
+function nearbySearch(pos) {
+	// GOOGLE PLACES API
+
+	let posizioneAttuale = milano; //VARIABILE PER TENERE TRACCIA DELLA POSIZIONE LAT E LNG
+
+	// VARIABILE RICHIESTA
+	let request = {
+		location: posizioneAttuale,
+		radius: '5000',
+		type: ['tourist_attraction']
+	};
+
+	// RICHIESTA DI SERVIZIO NEARBYSEARCH
+	let service = new google.maps.places.PlacesService(map);
+	service.nearbySearch(request, callback);
+
+	// FUNZIONE PER CONTROLLARE SE IL SERVIZIO E' AGIBILE
+	function callback(results, status) {
+		if (status == google.maps.places.PlacesServiceStatus.OK) {
+			for (let i = 0; i < results.length; i++) {
+
+
+			 creaMarker(results[i]);
+				//console.log(results[i].place_id);
+			}
+		}
+	}
+}
+function creaMarker(nodo) {
+
+	tuttiMarker.push(nodo); // AGGIUNGE ALL'ARRAY tuttiMarker IL nodo PRESO DA INPUT
+
+	let markerAttrazione = new google.maps.Marker({
+		position: nodo.geometry.location,
+		map,
+		title: nodo.name,
+	})
+}
 
 window.initMap = initMap;
 
