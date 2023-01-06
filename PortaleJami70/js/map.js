@@ -1,3 +1,4 @@
+//inizio dich mappa
 let map;
 
 function initMap() {
@@ -20,25 +21,25 @@ function initMap() {
 /*------------------------------------------*/
     
   /* posizioni BUS*/
-  const bus1= { lat:  45.434009,lng:9.219836};
+  const bus1= { lat: 45.47334620819007,lng:9.180587626529356};
   const markerbus1 = new google.maps.Marker({
     position: bus1,
     map: map,
   });
 
-  const bus2 = { lat:45.465593, lng:9.131648};
+  const bus2 = { lat:45.462088059528924, lng:9.174477149470677};
   const markerbus2 = new google.maps.Marker({
     position: bus2,
     map: map,
   });
 
-  const bus3 = { lat:45.499541, lng:9.201576};
+  const bus3 = { lat:45.470371974486014, lng:9.18465463899441};
   const markerbus3 = new google.maps.Marker({
     position: bus3,
     map: map,
   });
  
-  const bus4 = { lat:45.528589, lng:9.194113};
+  const bus4 = { lat:45.46371588528707, lng:9.197511192677803};
   const markerbus4 = new google.maps.Marker({
     position: bus4,
     map: map,
@@ -73,7 +74,7 @@ else {
 }
 });
 
-/*----------------------------------------------------------------------------*/
+/* fine bus----------------------------------------------------------------------------*/
  
 /* posizioni caf*/
   const caf1 = { lat:  45.459898, lng:9.201167
@@ -119,7 +120,7 @@ else {
 });
 
 
-/*------------------------------------------*/
+/*--fine caf----------------------------------------*/
     
   /* posizioni SPORT*/
   const sport= { lat:  45.476274,lng:9.128658
@@ -181,7 +182,7 @@ else {
 
 
 
-/*------------------------------------------*/
+/*-----------fine sport-------------------------------*/
     
   /* posizioni WC*/
   const wc1= { lat:  45.438009,lng:9.219838};
@@ -238,7 +239,10 @@ else {
 }
 });
 
-/*-----------------------------------------------------------------------*/
+/*-------------------------------fine wc----------------------------------------*/
+
+//--------------------inizio sezione nearby search ----------------
+
 // Crea un oggetto di ricerca per le attrazioni turistiche
 var request = {
   location: milano,
@@ -267,6 +271,8 @@ service.nearbySearch(request, function(results, status) {
     }
  
 console.log(attractions);
+
+
 /* filtro attrazioni*/
 document.getElementById('flexCheckInterestPoints').addEventListener('change',function(){
   if (this.checked){
@@ -282,7 +288,7 @@ document.getElementById('flexCheckInterestPoints').addEventListener('change',fun
     });
   }
   
-  }); //filtro
+  }); //fine filtro attrazioni e nearby search
 
 
   }
@@ -291,7 +297,7 @@ document.getElementById('flexCheckInterestPoints').addEventListener('change',fun
 
 
 
-}/*function init map*/
+}/*fine function init map*/
 
 
 
@@ -299,6 +305,27 @@ window.initMap = initMap;
 
 
 
+/*------JQUERY----*/
 
-/* posizioni PUNTI INTERESSE*/
+$(document).ready(function() {
+  $(".menu-icon").on("click", function() {
+        $("nav ul").toggleClass("showing");
+  });
+});
+
+// Scrolling Effect
+
+$(window).on("scroll", function() {
+  if($(window).scrollTop()) {
+        $('nav').addClass('black');
+  }
+
+  else {
+        $('nav').removeClass('black');
+  }
+})
+
+
+/*----fine jquery------ */
+
 

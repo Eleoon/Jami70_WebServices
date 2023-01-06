@@ -1,3 +1,20 @@
+/*GENERAL*/
+
+a:hover{
+  
+  color: orange;
+  
+  }
+
+  a:link { text-decoration: none; }
+  a:visited { text-decoration: none; }
+  a:hover { text-decoration: none; }
+  a:active { text-decoration: none; }
+
+/*--- FINE GENERAL-- */
+
+/*------video----- */
+
 #background-video {
     height: 100vh;
     width: 100vw;
@@ -9,9 +26,144 @@
     bottom: 0;
     z-index: -1;
   }
+  /*-----fine video----*/
+
+  
+
+  
+  /*--------------------------------------------------------------
+# Sections & Section Header
+--------------------------------------------------------------*/
+
+header {
+  width: 100%;
+  height: 40vh;
+  background: url(https://wallpaper.wiki/wp-content/uploads/2017/05/wallpaper.wiki-Beautiful-Full-HD-Wallpaper-Download-Free-PIC-WPE0010098.jpg) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.logo {
+  line-height: 60px;
+  position: fixed;
+  float: left;
+  margin: 16px 46px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 25px;
+  letter-spacing: 3px;
+  font-style: italic;
+}
+
+nav {
+  position:fixed;
+  width: 100%;
+  line-height: 60px;
+}
+
+nav ul {
+  line-height: 60px;
+  list-style: none;
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  color: #fff;
+  padding: 0;
+  text-align: right;
+  margin: 0;
+  padding-right: 40px;
+  transition: 1s;
+}
+
+nav.black ul {
+  background: #000;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 16px 40px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  
+}
+
+nav ul li a:hover{
+  
+  color: orange;
+  
+  }
+
+  nav ul li a:link { text-decoration: none; }
+
+
+  nav ul li a:visited { text-decoration: none; }
+  
+  
+  nav ul li a:hover { text-decoration: none; }
+  
+  
+   nav ul li a:active { text-decoration: none; }
+  
+  
+
+.menu-icon {
+  line-height: 60px;
+  width: 100%;
+  background: #000;
+  text-align: right;
+  box-sizing: border-box;
+  padding: 15px 24px;
+  cursor: pointer;
+  color: #fff;
+  display: none;
+}
+
+@media(max-width: 786px) {
+
+  .logo {
+        position: fixed;
+        top: 0;
+        margin-top: 16px;
+  }
+
+  nav ul {
+        max-height: 0px;
+        background: #000;
+  }
+
+  nav.black ul {
+        background: #000;
+  }
+
+  .showing {
+        max-height: 34em;
+  }
+
+  nav ul li {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 24px;
+        text-align: center;
+  }
+
+  
+  .menu-icon {
+        display: block;
+  }
+
+}
+
+/*---- fine header ----- */
+
+
+
+
+  /*--------main------*/
 
 #primaFrase {
-    margin-top: 120px;
+    margin-bottom: 30px;
 }
 
 #mappa {
@@ -19,23 +171,19 @@
 }
 
 #filtro{
-    margin-top: 250px;
+    margin-top: 180px;
+    
 
 
 }
-
+/*
 .white{
     color :white;
 }
+*/
 
-h2{
-  color: rgb(243, 243, 243);
-  mix-blend-mode:difference;
-}
 
-h3{
-    color :rgb(151, 195, 207)
-}
+
 
 
 /* MAPPA */
@@ -49,14 +197,150 @@ h3{
   
   /* 
    * Optional: Makes the sample page fill the window. 
-   */
+   
   html,
   body {
     height: 100%;
     margin: 0;
     padding: 0;
   }
+*/
 
  .sport {
     filter: hue-rotate(90deg);
   }
+/*-----fine main----*/
+
+
+/*---- under the map----*/
+  .container h2,h3 a {
+    color:white;
+  }
+
+  .container h3{
+    color :rgb(16, 230, 80)
+}
+
+
+/*---- fine under the map ---*/
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.footer {
+  color: #fff;
+  background: url("../img/footer-bg.jpg") top center no-repeat;
+  background-size: cover;
+  font-size: 14px;
+  padding: 80px 0 60px 0;
+  position: relative;
+}
+
+.footer:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  inset: 0;
+}
+
+.footer .footer-content .footer-info {
+  margin-bottom: 30px;
+}
+
+.footer .footer-content .footer-info h3 {
+  font-size: 28px;
+  margin: 0 0 20px 0;
+  padding: 2px 0 2px 0;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.footer .footer-content .footer-info h3 span {
+  color: var(--color-primary);
+}
+
+.footer .footer-content .footer-info p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+  font-family: var(--font-primary);
+  color: #fff;
+}
+
+.footer .footer-content .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  line-height: 1;
+  margin-right: 8px;
+  border-radius: 4px;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+.footer .footer-content .social-links a:hover {
+  background: var(--color-primary);
+  text-decoration: none;
+}
+
+.footer .footer-content h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.footer .footer-content .footer-links {
+  margin-bottom: 30px;
+}
+
+.footer .footer-content .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer .footer-content .footer-links ul li {
+  padding: 8px 0;
+}
+
+.footer .footer-content .footer-links ul li:first-child {
+  padding-top: 0;
+}
+
+.footer .footer-content .footer-links ul a {
+  color: rgba(255, 255, 255, 0.6);
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 1;
+}
+
+.footer .footer-content .footer-links ul a:hover {
+  color: #fff;
+}
+
+.footer .footer-legal .copyright {
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer .footer-legal .credits {
+  padding-top: 4px;
+  font-size: 13px;
+  color: #fff;
+}
+
+.footer .footer-legal .credits a {
+  color: var(--color-primary);
+}
+
+.footer-info h3{
+  color: #fff;
+}
+
+/*--fine footer--*/
