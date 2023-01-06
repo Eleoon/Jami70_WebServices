@@ -261,9 +261,28 @@ service.nearbySearch(request, function(results, status) {
         icon: {url:'../img/attrazione2.png', scaledSize: new google.maps.Size(60, 60)},
 
       });
+    
+      /* filtro attrazioni*/
+document.getElementById('flexCheckInterestPoints').addEventListener('change',function(){
+  if (this.checked){
+    service.forEach(function(element) {
+      element.setVisible(true)
+      console.log("siamo in checked")
+     });
+  }
+  else {
+   service.forEach(function(element) {
+    element.setVisible(false);
+    console.log("siamo in else")
+    });
+  }
+  })
+
     }
   }
 });
+
+
 
 
 }/*function init map*/
