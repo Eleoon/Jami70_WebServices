@@ -213,7 +213,11 @@ nav ul li a:hover{
   .container h2,h3 a {
     color:white;
   }
-
+/*
+  h2{
+    mix-blend-mode:difference;
+  }
+*/
   .container h3{
     color :rgb(16, 230, 80);
 }
