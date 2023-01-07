@@ -1,15 +1,6 @@
 /*GENERAL*/
 
-a:hover{
-  
-  color: orange;
-  
-  }
 
-  a:link { text-decoration: none; }
-  a:visited { text-decoration: none; }
-  a:hover { text-decoration: none; }
-  a:active { text-decoration: none; }
 
 /*--- FINE GENERAL-- */
 
@@ -168,6 +159,7 @@ nav ul li a:hover{
 
 #mappa {
     height: 700px;
+    
 }
 
 #filtro{
@@ -176,6 +168,10 @@ nav ul li a:hover{
 
 
 }
+
+
+
+
 /*
 .white{
     color :white;
@@ -193,6 +189,7 @@ nav ul li a:hover{
  */
  #map {
     height: 75%;
+    
   }
   
   /* 
@@ -218,8 +215,19 @@ nav ul li a:hover{
   }
 
   .container h3{
-    color :rgb(16, 230, 80)
+    color :rgb(16, 230, 80);
 }
+
+.container h3 a:hover{
+  
+  color: rgb(16, 230, 80);
+  
+  }
+
+  .container h3 a:link { text-decoration: none; }
+  .container h3 a:visited { text-decoration: none; }
+  .container h3 a:hover { text-decoration: none; }
+  .container h3 a:active { text-decoration: none; }
 
 
 /*---- fine under the map ---*/
