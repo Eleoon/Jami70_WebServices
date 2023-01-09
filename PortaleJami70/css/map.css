@@ -36,19 +36,21 @@ header {
 .logo {
   line-height: 60px;
   position: fixed;
-  float: left;
-  margin: 16px 46px;
-  color: #fff;
-  font-weight: bold;
-  font-size: 25px;
-  letter-spacing: 3px;
-  font-style: italic;
+  margin: 5px 65px;
+  max-width: 10%;
+  
+  
 }
-
+#logojami {
+width:50%;
+float:left;
+  
+}
 nav {
   position:fixed;
   width: 100%;
   line-height: 60px;
+  z-index: 1000;
 }
 
 nav ul {
@@ -76,8 +78,8 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #fff;
-  font-size: 16px;
+  color: white;
+  font-size: 15px;
   
 }
 
@@ -96,7 +98,7 @@ nav ul li a:hover{
   nav ul li a:hover { text-decoration: none; }
   
   
-   nav ul li a:active { text-decoration: none; }
+  nav ul li a:active { text-decoration: none; }
   
   
 
@@ -161,10 +163,15 @@ nav ul li a:hover{
 #mappa {
     height: 700px;
     
+    
 }
 
 #filtro{
     margin-top: 180px;
+    border:orange 3px solid;
+    border-radius: 20px;
+    height: 75%;
+    padding: 15px;
 }
 
 #filtro h2{
@@ -192,7 +199,10 @@ nav ul li a:hover{
   background-color: black;
   text-align: center;
 }
-
+#wctoilet::after {
+  
+  width: 0;
+}
 /* MAPPA */
 /* 
  * Always set the map height explicitly to define the size of the div element
@@ -200,6 +210,8 @@ nav ul li a:hover{
  */
  #map {
     height: 80%;
+    border:orange 3px solid;
+    border-radius:20px;
     
   }
   
@@ -248,13 +260,20 @@ nav ul li a:hover{
 # Footer
 --------------------------------------------------------------*/
 .footer {
-  color: #fff;
+  color:white;
   background: top center no-repeat;
   background-size: cover;
   font-size: 14px;
-  padding: 80px 0 60px 0;
+  padding: 80px 0 30px 0;
   position: relative;
 }
+
+#logofooter {
+  width:25%;
+  margin-bottom:10px;
+  
+}
+
 
 .footer:before {
   content: "";
@@ -263,18 +282,9 @@ nav ul li a:hover{
   inset: 0;
 }
 
-.footer .footer-content .footer-info {
-  margin-bottom: 30px;
-}
 
-.footer .footer-content .footer-info h3 {
-  font-size: 28px;
-  margin: 0 0 20px 0;
-  padding: 2px 0 2px 0;
-  line-height: 1;
-  font-weight: 700;
-  text-transform: uppercase;
-}
+
+
 
 .footer .footer-content .footer-info h3 span {
   color: var(--color-primary);
@@ -283,7 +293,6 @@ nav ul li a:hover{
 .footer .footer-content .footer-info p {
   font-size: 14px;
   line-height: 24px;
-  margin-bottom: 0;
   font-family: var(--font-primary);
   color: #fff;
 }
