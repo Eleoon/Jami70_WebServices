@@ -1,0 +1,45 @@
+
+  
+  
+  .logo {
+    
+    margin-left:100px;
+    color:white;
+    text-align: center; 
+  }
+
+  #logojami {
+  width:15%;
+  float:left;
+  }
+
+.icon{
+  color:white;
+  position:absolute;
+  top:50;
+  left:30%;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 20px;
+  letter-spacing: 1;
+}
+  nav {
+    position:fixed;
+    width: 100%;
+    line-height: 10px;
+    z-index: 1;
+  }
+  
+  @media(max-width: 786px) {
+  
+    .logo {
+          position: fixed;
+          top: 0;
+          margin-top: 16px;
+    }
+  
+    
+  
+  
+  }
+  
+  /*---- fine header ----- *
