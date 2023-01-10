@@ -19,7 +19,7 @@
  
  
 <div id="globeViz"></div>
-<!--<div><img src="../../../img/LogoJAMI70.png"></div>-->
+<div><img src="../../../img/LogoJAMI70.png"></div>
 <script>
   fetch('../datasets/ne_110m_populated_places_simple.geojson').then(res => res.json()).then(places => {
     Globe()
@@ -33,8 +33,11 @@
       .labelDotRadius(d => Math.sqrt(d.properties.pop_max) * 4e-4)
       .labelColor(() => 'orange')
       .labelResolution(2)
-      .onLabelClick((d) => ClickCity())
+      //.onLabelClick((d) => ClickCity())
+      .onLabelClick(d => window.open("http//127.0.0.1:3000/PortaleJami70/html/map.html", "_blank"),{lat:45.477781673393366,lng:9.186916132921075})
     (document.getElementById('globeViz'))
+    console.log(places.features);
+    
   });
 
 </script>
