@@ -4,22 +4,58 @@
   integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
   <!--globe-->
-  <style> body { margin: 0; } </style>
+  <style> body { margin: 0;} </style>
 
   <script src="//unpkg.com/globe.gl"></script>
   <!--<script src="../../dist/globe.gl.js"></script>-->
 
   <!---css-->
-  
+  <link href="../../../css/map.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+  <!--dan-->
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 </head>
 
 <body>
+  <div class="wrapper">
+    <header style="height:200px">
+       <nav>
+          <div class="menu-icon">
+             <i class="fa fa-bars fa-2x"></i>
+          </div>
+          <div class="logo">
+            <a href="../globe.gl-master/example/world-cities/index.html"><img src="../../../img/LogoJAMI70.png" id="logojami"></a>
+          </div>
+          <div class="menu">
+             <ul>
+                <li><a href="#">BusSimulator</a></li>
+                <li><a href="#">CafMi</a></li>
+                <li><a href="#">Pathways</a></li>
+                <li><a href="#">Sportify</a></li>
+                <li><a href="#">Spoken Life</a></li>
+             </ul>
+          </div>
+       </nav>
+    </header>
+    </div>
+ 
+ 
+<div id="globeViz" >
+  <!--<div class="col-12 ">
+    <h3 class="center text-uppercase" style="font-size: 5em; color:white; z-index: 100;">Scegli La Città</h3>
+    <i class="fa-solid fa-arrow-left pe-2 me-2"></i> Scorri le immagini <i
+      class="fa-solid fa-arrow-right ps-2 ms-2"></i>
+      </div>
+      <img src="../../../img/LogoJAMI70.png" >-->
+</div>
 
- 
- 
-<div id="globeViz"></div>
-<div><img src="../../../img/LogoJAMI70.png"></div>
+
 <script>
   fetch('../datasets/ne_110m_populated_places_simple.geojson').then(res => res.json()).then(places => {
     Globe()
