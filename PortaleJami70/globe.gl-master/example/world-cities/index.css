@@ -5,15 +5,23 @@
     
     margin-left:100px;
     color:white;
-    text-align: center;
-    
-    
+    text-align: center; 
   }
+
   #logojami {
-  width:5%;
+  width:15%;
   float:left;
-    
   }
+
+.icon{
+  color:white;
+  position:absolute;
+  top:50;
+  left:33%;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 20px;
+  letter-spacing: 1;
+}
   nav {
     position:fixed;
     width: 100%;

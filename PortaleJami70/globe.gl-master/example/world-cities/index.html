@@ -28,11 +28,11 @@
        <nav>
           <div class="logo">
             <img src="../../../img/LogoJAMI70.png" id="logojami"></a>
-            <i class="bi bi-arrow-left pe-2 me-2"></i>Ruota il globo e trova i servizi nella tua citta<i
-            class="bi bi-arrow-right ps-2 ms-2"></i>
-          </div>
-          <div>
             
+          </div>
+          <div class="icon">
+            <i class="bi bi-arrow-left pe-2 me-2"></i>Ruota il globo e trova i servizi nella tua città<i
+            class="bi bi-arrow-right ps-2 ms-2"></i
           </div>
           
        </nav>
@@ -40,7 +40,7 @@
     
  
  
-<div id="globeViz" >
+<div id="globeViz">
   <!--<div class="col-12 ">
     <h3 class="center text-uppercase" style="font-size: 5em; color:white; z-index: 100;">Scegli La Città</h3>
     <i class="fa-solid fa-arrow-left pe-2 me-2"></i> Scorri le immagini <i
@@ -63,8 +63,8 @@
       .labelDotRadius(d => Math.sqrt(d.properties.pop_max) * 4e-4)
       .labelColor(() => 'orange')
       .labelResolution(2)
-      //.onLabelClick((d) => ClickCity())
-      .onLabelClick(d => window.open("http//127.0.0.1:3000/PortaleJami70/html/map.html", "_blank"),{lat:45.477781673393366,lng:9.186916132921075})
+      .onLabelClick((d) => ClickCity())
+      //.onLabelClick(d => window.open("http//127.0.0.1:3000/PortaleJami70/html/map.html", "_blank"),{lat:45.477781673393366,lng:9.186916132921075})
     (document.getElementById('globeViz'))
     console.log(places.features);
     
@@ -72,6 +72,6 @@
 
 </script>
 
-<script src="clicca.js"></script>
+<script src="index.js"></script>
 
 </body>
