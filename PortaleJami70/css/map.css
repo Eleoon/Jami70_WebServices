@@ -16,6 +16,7 @@
     top: 0;
     bottom: 0;
     z-index: -1;
+     
   }
   /*-----fine video----*/
 
@@ -173,11 +174,15 @@ nav ul li a:hover{
     border-radius: 20px;
     height: 75%;
     padding: 15px;
+    
 }
 
 #filtro h2{
   color:rgb(243,243,243);
   mix-blend-mode: difference;
+}
+#filtro a{
+  color:white;
 }
 
 #filtro  a:hover{
@@ -236,22 +241,22 @@ nav ul li a:hover{
 /*---- under the map----*/
   .container h2,h3 a {
     color:white;
+    font-family:'Play', sans-serif;
   }
 
-  .container h3{
-    color :rgb(16, 230, 80);
-}
+  
+  
+  
 
-.container h3 a:hover{
-  
-  color: rgb(16, 230, 80);
-  
+  /*.container h2 a:link { text-decoration: none; }
+  .container h2 a:visited { text-decoration: none; }
+  .container h2 a:hover { text-decoration: none; }
+  .container h2 a:active { text-decoration: none; }*/
+
+  .container h2 a{
+    color:rgba(36, 212, 239, 0.928);
+    
   }
-
-  .container h3 a:link { text-decoration: none; }
-  .container h3 a:visited { text-decoration: none; }
-  .container h3 a:hover { text-decoration: none; }
-  .container h3 a:active { text-decoration: none; }
 
 
 /*---- fine under the map ---*/
@@ -265,12 +270,14 @@ nav ul li a:hover{
   background: top center no-repeat;
   background-size: cover;
   font-size: 14px;
-  padding: 80px 0 30px 0;
+  padding: 60px 0 30px 0;
   position: relative;
+  font-family:'Play', sans-serif;
+
 }
 
 #logofooter {
-  width:25%;
+  width:50%;
   margin-bottom:10px;
   
 }
@@ -295,20 +302,21 @@ nav ul li a:hover{
   font-size: 14px;
   line-height: 24px;
   font-family: var(--font-primary);
-  color: #fff;
+  color: rgb(255, 255, 255);
 }
 
 .footer .footer-content .social-links a {
   font-size: 18px;
   display: inline-block;
   background: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  color: rgb(251, 252, 253);
   line-height: 1;
   margin-right: 8px;
   border-radius: 4px;
   width: 36px;
   height: 36px;
   transition: 0.3s;
+  margin-bottom: 20px;
 }
 
 .footer .footer-content .social-links a:hover {
@@ -343,10 +351,12 @@ nav ul li a:hover{
 }
 
 .footer .footer-content .footer-links ul a {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(36, 212, 239, 0.928);
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
+  font-size: 15px;
+  font-weight: medium;
 }
 
 .footer .footer-content .footer-links ul a:hover {
